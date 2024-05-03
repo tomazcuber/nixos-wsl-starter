@@ -1,6 +1,6 @@
 {
   # FIXME: uncomment the next line if you want to reference your GitHub/GitLab access tokens and other secrets
-  # secrets,
+  secrets,
   config,
   pkgs,
   username,
@@ -98,7 +98,6 @@ in {
     homeDirectory = "/home/${username}";
 
     sessionVariables.EDITOR = "lvim";
-    # FIXME: set your preferred $SHELL
     sessionVariables.SHELL = "/etc/profiles/per-user/${username}/bin/zsh";
   };
 
@@ -160,18 +159,17 @@ in {
         side-by-side = true;
         navigate = true;
       };
-      userEmail = ""; # FIXME: set your git email
-      userName = ""; #FIXME: set your git username
+      userEmail = "tomazcuber@outlook.com"; 
+      userName = "tomazcuber";       
       extraConfig = {
-        # FIXME: uncomment the next lines if you want to be able to clone private https repos
-        # url = {
-        #   "https://oauth2:${secrets.github_token}@github.com" = {
-        #     insteadOf = "https://github.com";
-        #   };
+        url = {
+          "https://oauth2:${secrets.github_token}@github.com" = {
+            insteadOf = "https://github.com";
+          };
         #   "https://oauth2:${secrets.gitlab_token}@gitlab.com" = {
         #     insteadOf = "https://gitlab.com";
         #   };
-        # };
+        };
         push = {
           default = "current";
           autoSetupRemote = true;
