@@ -161,7 +161,7 @@ in {
         side-by-side = true;
         navigate = true;
       };
-      userEmail = "tomazcuber@outlook.com"; 
+      userEmail = "tomaz_br_23@hotmail.com"; 
       userName = "tomazcuber";       
       extraConfig = {
         url = {
@@ -222,6 +222,7 @@ in {
         cd = "z";
         gc = "nix-collect-garbage --delete-old";
         refresh = "source ${config.home.homeDirectory}/.zshrc";
+        rebuild = "sudo nixos-rebuild switch --flake ~/configuration/";
         show_path = "echo $PATH | tr ':' '\n'";
 
         # FIXME: add more git aliases here if you want them
