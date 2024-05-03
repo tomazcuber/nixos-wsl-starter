@@ -42,6 +42,8 @@
     # key tools
     gh # for bootstrapping
     just
+    file
+
 
     # core languages
     rustup
